@@ -28,4 +28,22 @@
     }
 ```
   - `[Authorize]` kann auch an Controllern hinterlegt werden.
-  
+  - `[AllowAnonymous]` ist das Gegenattribut. Beispiel: In einem Controller, der für alle Aufrufe eine Authorization erwartet, wird eine Ausnahme definiert:
+
+```C# 
+    [Authorize]
+    public class SecretController : Controller
+    {
+
+        public ContentResult Secret()
+        {
+            return Content("This is a secret for authenticated users...");
+        }
+
+        [AllowAnonymous]
+        public ContentResult Overt()
+        {
+            return Content("Not a secret...");
+        }
+    }
+```
