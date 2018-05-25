@@ -47,3 +47,9 @@
         }
     }
 ```
+  - `[Authorize(Roles="admin")]` Der Benutzer muss in der Gruppe "admin" sein, um Zugriff zu haben.
+  - `[Authorize(Roles="admin,sales")]` Der Benutzer muss in der Gruppe "admin" oder in der Gruppe "sales" sein, um Zugriff zu haben.
+  - `[Authorize(Users="bob")]` Der Benutzer 'bob' hat Zugriff.
+  - `User.Identity` gibt Zugriff auf die Identität des Benutzers
+  - `User.IsInRole` fragt ab, ob der Benutzer Teil einer bestimmten Rolle ist.
+  
