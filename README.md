@@ -2,4 +2,4 @@
 
 Mitschriften zum Pluralsight MVC5 Learning Path.
 
-Jeder Ordner entspricht dem entsprechendem Kurs.
+Jeder Ordner entspricht dem entsprechenden Kurs.
