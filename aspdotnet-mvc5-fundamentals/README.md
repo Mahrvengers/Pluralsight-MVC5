@@ -53,3 +53,8 @@
   - `User.Identity` gibt Zugriff auf die Identität des Benutzers
   - `User.IsInRole` fragt ab, ob der Benutzer Teil einer bestimmten Rolle ist.
   
+Wir stellen überrascht fest, dass man in der Anwendung angemeldet sein kann, auch wenn die Anwendung einen gar nicht kennt. 
+Die Identität des Benutzers wird als verschlüsselter Cookie gespeichert und von dort aus vollständig akzeptiert, was aus unserer Sicht ein Sicherheitsproblem darstellt, denn der Cookie ist ja auf dem System des Benutzers. 
+Auch wenn es vielleicht kompliziert ist, ist es möglich, dass der Cookie früher oder später geknackt und mit alternativen Informationen befüllt wird. Uns ist daher unklar, wie die Sicherheit hier ernsthaft hergestellt wird.
+
+
